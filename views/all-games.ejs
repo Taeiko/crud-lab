@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>All games</h1>
+
+    <%allGames.forEach((oneGame)=>{ %>
+    <p>Game name: <%= oneGame.name%></p>
+    <a href="/games/<%= oneGame._id %>">see game details</a>
+   <% }) %> 
+</body>
+</html>

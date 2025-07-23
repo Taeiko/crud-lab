@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Game log page</h1>
+
+    <form action="/games/create" method="post">
+
+    <label for="gameName">Game name:</label>
+    <input name="name" id="gameName" type="text">
+
+    <label for="gameDesc">Game decription:</label>
+    <input name="gameDesc" type="text">
+
+    <label for="isWorthPlaying">Is it worth a play?</label>
+    <input name="isWorthPlaying" id="isWorthPlaying" type="checkbox">
+
+    <button type="submit">submit</button>
+
+    </form>
+
+</body>
+</html>
