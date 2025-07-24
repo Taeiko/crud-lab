@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update game</title>
+    <h1><%= foundGame.name %></h1>
+    <form action="/games/update/<%=foundGame._id %>?_method=PUT" method="post">
+        <label for="name">Game name:</label>
+        <input value="<%= foundGame.name %>" type="text" name="name" id="name">
+
+        <label for="isWorthPlaying">Is it worth playing?</label>
+        <input <% if (foundGame.isWorthPlaying){ %> checked <% } %> type="checkbox" name="isWorthPlaying" id="isWorthPlaying">
+
+        <button type="submit">Update</button>
+    </form>
+</head>
+<body>
+    
+</body>
+</html>
