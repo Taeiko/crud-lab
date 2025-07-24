@@ -72,10 +72,10 @@ res.render("game-update.ejs", {foundGame})
 
 app.put("/games/update/:gameId", async (req,res)=>{
     console.log(req.params.id, req.body)
-    const updatedGame = await Game.findByIdAndUpdate(req.params.gameId, req.body)
     if (req.body.isWorthPlaying === "on"){
         req.body.isWorthPlaying = true
     }
+    const updatedGame = await Game.findByIdAndUpdate(req.params.gameId, req.body)
     res.redirect('/games')
 })
 
